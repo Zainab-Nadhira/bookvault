@@ -94,9 +94,7 @@ const Login = () => {
             Create an account
           </Link>
         </p>
-        <p className="text-center text-xs text-stone-400 mt-3">
-          Demo: demo@bookvault.app / password123
-        </p>
+       
       </motion.div>
     </div>
   );

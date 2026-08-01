@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bgLight text-stone-800 font-sans transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-bgDark text-stone-100;
+}
+
+::selection {
+  background: #6D4C41;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #8D6E63;
+  border-radius: 999px;
+}
+
+/* Glassmorphism card */
+.glass {
+  @apply bg-white/70 dark:bg-white/5 backdrop-blur-md border border-white/40 dark:border-white/10 shadow-soft;
+}
+
+.glass-card {
+  @apply glass rounded-xl2 p-6 transition-all duration-300;
+}
+
+.glass-card:hover {
+  @apply shadow-glow;
+  transform: translateY(-2px);
+}
+
+/* Buttons */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary text-white px-5 py-2.5 font-medium shadow-soft transition-all duration-200 hover:bg-[#5d3f36] hover:shadow-glow active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent/60 dark:bg-white/10 text-primary dark:text-accent px-5 py-2.5 font-medium transition-all duration-200 hover:bg-accent active:scale-95;
+}
+
+.input-field {
+  @apply w-full rounded-xl border border-stone-200 dark:border-white/10 bg-white/80 dark:bg-white/5 px-4 py-2.5 text-stone-800 dark:text-stone-100 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all;
+}
+
+/* Floating particles background */
+.particles {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(109,76,65,0.18), transparent 70%);
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Shimmer loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, rgba(141,110,99,0.08) 25%, rgba(141,110,99,0.18) 37%, rgba(141,110,99,0.08) 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}

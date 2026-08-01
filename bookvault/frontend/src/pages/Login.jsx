@@ -50,7 +50,7 @@ const Login = () => {
               type="email"
               required
               placeholder="Email address"
-              className="input-field pl-10"
+             className="input-field pl-14"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               aria-label="Email address"
@@ -62,7 +62,7 @@ const Login = () => {
               type={showPassword ? 'text' : 'password'}
               required
               placeholder="Password"
-              className="input-field pl-10 pr-10"
+              className="input-field pl-14"
               value={form.password}
               onChange={(e) => setForm({ ...form, password: e.target.value })}
               aria-label="Password"
